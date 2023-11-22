@@ -10,35 +10,41 @@ A modul az alábbi programozási tételek implementációját tartalmazza:
 """
 # megszámlálás tétele - függvény
 def megszamlalas(M, T):
-    """
-    Adott egy n elemű M sorozat és egy T tulajdonság.
-    Meghatározzuk a T tulajdonsággal rendelkező elemek számát!
-    A függvény visszatérési értéke adja meg ezt!
-    """
+    property = f'M[i]{T}'
+    sum = 0;
+    for i in range(len(M)):
+        if(eval(property)):
+            sum += 1
+        else:
+            continue
+
+    return sum
 
 # összegzés tétele - függvény
 def osszegzes(T):
-    """
-    Adott egy n elemű T sorozat.
-    Meghatározzuk a T sorozat elemeinek összegét!
-    A függvény visszatérési értéke adja meg ezt!
-    """
+    sum = 0
+    for i in T:
+        sum += i
+
+    return sum
 
 # maximumkiválasztás tétele - függvény
 def maxkivalaszt(T):
-    """
-    Adott egy n elemű T sorozat.
-    Megkeressük meg a sorozat legnagyobb elemét!
-    A függvény visszatérési értéke adja meg ezt!
-    """
+    temp = 0
+    for i in T:
+        for j in T:
+            if j>i and j>temp:
+                temp = j
+    return temp
 
 # minimum kiválasztás tétele - függvény
 def minkivalaszt(T):
-    """
-    Adott egy n elemű T sorozat.
-    Megkeressük meg a sorozat legkisebb elemét!
-    A függvény visszatérési értéke adja meg ezt!
-    """
+    temp = 0;
+    for i in T:
+        for j in T:
+            if j<i and j<temp:
+                temp = j
+    return temp
 
 # eldöntés tétele - függvény
 def eldontes(M, T):
