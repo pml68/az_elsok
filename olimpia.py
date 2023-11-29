@@ -31,7 +31,8 @@ def main():
     olimpiak["pontszám"] = ossz_pont_minden_olimpia
     pontszam_csv = olimpiak[["év", "város","pontszám"]]
     fuggvenyek.kiir(pontszam_csv, "pontszam.csv")
+    rendezett_csv = olimpiak.sort_values(by="pontszám", ascending=False)
+    fuggvenyek.kiir(rendezett_csv, "rendezett.csv")
     
 if __name__ == "__main__":
     main()
-  
