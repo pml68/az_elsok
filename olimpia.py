@@ -28,6 +28,9 @@ def main():
     print(f'Eddig elért összes bronzérem: {ossz_bronz}')
     atlag_pontszam = tetelek.osszegzes(ossz_pont_minden_olimpia) / len(ossz_pont_minden_olimpia)
     print(f'Eddigi átlag pontszám: {round(atlag_pontszam, 2):.2f}')
+    olimpiak["pontszám"] = ossz_pont_minden_olimpia
+    pontszam_csv = olimpiak[["év", "város","pontszám"]]
+    fuggvenyek.kiir(pontszam_csv, "pontszam.csv")
     
 if __name__ == "__main__":
     main()
