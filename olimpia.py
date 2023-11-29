@@ -15,7 +15,7 @@ def main():
     ossz_arany = 0
     ossz_ezust = 0
     ossz_bronz = 0
-    arany,ezust,bronz = []
+    arany,ezust,bronz = [], [], []
     for o in ossz_erem_minden_olimpia:
         arany.append(o[0])
         ezust.append(o[1])
