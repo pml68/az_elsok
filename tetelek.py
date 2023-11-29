@@ -48,20 +48,28 @@ def minkivalaszt(T):
 
 # eldöntés tétele - függvény
 def eldontes(M, T):
-    """
-    Adott egy n elemű M sorozat, és az elemein értelmezett T tulajdonság.
-    Eldöntjük el, hogy van-e legalább egy olyan elem a sorozatban,
-    amely rendelkezik a T tulajdonsággal!
-    A függvény visszatérési értéke (True/Falsee) adja meg ezt!
-    """
+    property = f'M[i]{T}'
+    alap = False
+    for i in range(len(M)):
+        if(eval(property)):
+            alap = True
+        else:
+            continue
+
+    return alap
 
 # kiválogatás tétele - függvény
 def kivalogat(M, T):
-    """
-    Adott egy n elemű M sorozat és egy T tulajdonság.
-    Gyűjtsük ki az A sorozatba a T tulajdonságú M-beli elemeket!
-    A függvény visszatérési érétke (A) adja meg ezt!
-    """
+    property = f'M[i]{T}'
+    val = list()
+    for i in range(len(M)):
+        if(eval(property)):
+            val.append(M[i])
+        else:
+            continue
+
+    return val
+  
 
 # lineáris keresés tétele - függvény
 def keres(M, T):
@@ -71,4 +79,10 @@ def keres(M, T):
     és megadjuk, hogy hányadik!
     A függvény visszatérési értéke adja meg ezt!
     """
+    property = f'M[i]{T}'
     
+    for i in range(len(M)):
+        if(eval(property)):
+            return i        
+        else:
+            continue
