@@ -12,7 +12,21 @@ def main():
         pontok = fuggvenyek.ossz_pont(ermek, ffs)
         ossz_erem_minden_olimpia.append(ermek)
         ossz_pont_minden_olimpia.append(pontok)
-
+    ossz_arany = 0
+    ossz_ezust = 0
+    ossz_bronz = 0
+    arany,ezust,bronz = []
+    for o in ossz_erem_minden_olimpia:
+        arany.append(o[0])
+        ezust.append(o[1])
+        bronz.append(o[2])
+    ossz_arany = tetelek.osszegzes(arany)
+    ossz_ezust = tetelek.osszegzes(ezust)
+    ossz_bronz = tetelek.osszegzes(bronz)
+    print(f'Eddig elért összes aranyérem: {ossz_arany}')
+    print(f'Eddig elért összes ezüstérem: {ossz_ezust}')
+    print(f'Eddig elért összes bronzérem: {ossz_bronz}')
+    
 if __name__ == "__main__":
     main()
   
