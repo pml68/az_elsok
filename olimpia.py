@@ -26,6 +26,8 @@ def main():
     print(f'Eddig elért összes aranyérem: {ossz_arany}')
     print(f'Eddig elért összes ezüstérem: {ossz_ezust}')
     print(f'Eddig elért összes bronzérem: {ossz_bronz}')
+    atlag_pontszam = tetelek.osszegzes(ossz_pont_minden_olimpia) / len(ossz_pont_minden_olimpia)
+    print(f'Eddigi átlag pontszám: {round(atlag_pontszam, 2):.2f}')
     
 if __name__ == "__main__":
     main()
