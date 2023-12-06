@@ -1,5 +1,6 @@
 import tetelek
 import fuggvenyek
+import pyfiglet
 
 def main():
     olimpiak = fuggvenyek.beolvas("olimpia.csv")
