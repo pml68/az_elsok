@@ -33,6 +33,14 @@ def main():
     fuggvenyek.kiir(pontszam_csv, "pontszam.csv")
     rendezett_csv = olimpiak.sort_values(by="pontszám", ascending=False)
     fuggvenyek.kiir(rendezett_csv, "rendezett.csv")
-    
+    varos = input("Adjon meg egy várost: ")
+    evszam = olimpiak.loc[olimpiak["város"] == varos, "év"]
+    if len(evszam) != 0:
+        print('\n')
+        for i in evszam:
+            f = pyfiglet.figlet_format(str(i), font="alphabet")
+            print(f)
+    else:
+        print("A megadott városban még nem rendeztek olimpiát!")
 if __name__ == "__main__":
     main()
