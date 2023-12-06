@@ -34,6 +34,18 @@ def main():
     fuggvenyek.kiir(pontszam_csv, "pontszam.csv")
     rendezett_csv = olimpiak.sort_values(by="pontszám", ascending=False)
     fuggvenyek.kiir(rendezett_csv, "rendezett.csv")
+
+    nincs_arany = olimpiak.loc[olimpiak["arany"] == 0, ["év", "város"]]
+    nincs_arany_ev, nincs_arany_varos = [], []
+    for i in nincs_arany["év"]:
+        nincs_arany_ev.append(i)
+
+    for i in nincs_arany["város"]:
+        nincs_arany_varos.append(i)
+
+    for i in range(len(nincs_arany_ev)):
+        print(f"Évszám: {nincs_arany_ev[i]}, város: {nincs_arany_varos[i]}")
+
     varos = input("Adjon meg egy várost: ")
     evszam = olimpiak.loc[olimpiak["város"] == varos, "év"]
     if len(evszam) != 0:
