@@ -52,6 +52,14 @@ def main():
         
         
     print(f'\nÉvszám: {legtobb_pontszam[0]}, Város: {legtobb_pontszam[1]}, Arany: {legtobb_pontszam[2]}, Ezüst: {legtobb_pontszam[3]}, Bronz: {legtobb_pontszam[4]}, IV.helyezett: {legtobb_pontszam[5]}, V.helyezett: {legtobb_pontszam[6]}, VI.helyezett: {legtobb_pontszam[7]}, Pontszám: {legtobb_pontszam[8]}')
+    
+    ossz_erem_egy_olimpia = []
+    for i in ossz_erem_minden_olimpia:
+        ermek = tetelek.osszegzes(i) 
+        ossz_erem_egy_olimpia.append(ermek)
+    olimpiak["érmék"] = ossz_erem_egy_olimpia
+    ossz_erem_csv = olimpiak[["év", "város", "érmék"]]
+    fuggvenyek.kiir(ossz_erem_csv, "ermek.csv")
 
     varos = input("Adjon meg egy várost: ")
     evszam = olimpiak.loc[olimpiak["város"] == varos, "év"]
