@@ -28,7 +28,7 @@ def main():
     print(f'Eddig elért összes ezüstérem: {ossz_ezust}')
     print(f'Eddig elért összes bronzérem: {ossz_bronz}')
     atlag_pontszam = tetelek.osszegzes(ossz_pont_minden_olimpia) / len(ossz_pont_minden_olimpia)
-    print(f'Eddigi átlag pontszám: {round(atlag_pontszam, 2):.2f}')
+    print(f'Eddigi átlag pontszám: {round(atlag_pontszam, 2):.2f}\n')
     olimpiak["pontszám"] = ossz_pont_minden_olimpia
     pontszam_csv = olimpiak[["év", "város","pontszám"]]
     fuggvenyek.kiir(pontszam_csv, "pontszam.csv")
@@ -45,6 +45,13 @@ def main():
 
     for i in range(len(nincs_arany_ev)):
         print(f"Évszám: {nincs_arany_ev[i]}, város: {nincs_arany_varos[i]}")
+                
+    legtobb_pontszam = []   
+    for i in rendezett_csv:
+        legtobb_pontszam.append(rendezett_csv[i].iloc[0])
+        
+        
+    print(f'\nÉvszám: {legtobb_pontszam[0]}, Város: {legtobb_pontszam[1]}, Arany: {legtobb_pontszam[2]}, Ezüst: {legtobb_pontszam[3]}, Bronz: {legtobb_pontszam[4]}, IV.helyezett: {legtobb_pontszam[5]}, V.helyezett: {legtobb_pontszam[6]}, VI.helyezett: {legtobb_pontszam[7]}, Pontszám: {legtobb_pontszam[8]}')
 
     varos = input("Adjon meg egy várost: ")
     evszam = olimpiak.loc[olimpiak["város"] == varos, "év"]
