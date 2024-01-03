@@ -12,3 +12,6 @@ Ezek között található
 - A legnagyobb elért pontszámmal rendelkező olimpia összes adata
 - Az aranyérem nélküli olimpiák évszáma és városa
 - Egy a felhasználó által megadott városban tartott összes olimpia évszáma ASCII Art-ban
+
+
+###### Ez a 2023-2024-es tanév 2. és ezzel utolsó IKT projekte
