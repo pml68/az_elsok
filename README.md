@@ -14,4 +14,4 @@ Ezek között található
 - Egy a felhasználó által megadott városban tartott összes olimpia évszáma ASCII Art-ban
 
 
-###### Ez a 2023-2024-es tanév 2. és ezzel utolsó IKT projekte
+###### Ez a 2023-2024-es tanév 2. és ezzel utolsó IKT projektje
